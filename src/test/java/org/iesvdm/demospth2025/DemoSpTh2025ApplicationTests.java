@@ -104,6 +104,7 @@ class DemoSpTh2025ApplicationTests {
         List<Comercial> list = comercialDAO.getAll();
 
         list.forEach(System.out::println);
+        Assertions.assertNotNull(list);
     }
 
     @Test
@@ -115,6 +116,7 @@ class DemoSpTh2025ApplicationTests {
         }else{
             System.out.println("Vacio");
         }
+        Assertions.assertTrue(optionalComercial.isPresent());
     }
     @Test
     void testCreateComercial(){
@@ -126,6 +128,8 @@ class DemoSpTh2025ApplicationTests {
         comercialDAO.create(comercial);
 
         System.out.println("Después de crear id: "+comercial.getId());
+        Assertions.assertTrue(comercial.getId() > 0);
+
     }
     @Test
     void testUpdateComercial(){
