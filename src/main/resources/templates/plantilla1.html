@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Tenemos que escribir esta ruta con xmlns para poder usar TH -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo th:text</title>
+</head>
+<body>
+
+<p th:text="'Reemplazo el parrafo'">
+    Párrafo
+</p>
+
+<p th:text="${parrafo2+' libro'}">
+    Párrafo
+</p>
+
+</body>
+</html>

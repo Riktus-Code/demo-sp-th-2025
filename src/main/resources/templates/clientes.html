@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Tenemos que escribir esta ruta con xmlns para poder usar TH -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+<div th:each="cliente: ${listaClientes}">
+    <span th:text="${cliente.nombre}"/>
+    <span th:text="${cliente.apellido1}"/>
+</div>
+</body>
+</html>
